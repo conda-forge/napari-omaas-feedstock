@@ -29,7 +29,7 @@ requirements:
     - napari-mat-file-reader
     - napari-matplotlib
     - napari-sif-reader
-    - napari_tiff
+    - napari-tiff
     - numpy
     - pandas  # Imported but not listed as requirement
     - pyqtgraph
