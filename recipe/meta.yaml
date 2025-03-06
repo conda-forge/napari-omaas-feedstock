@@ -8,8 +8,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: bb733d15606cb87f2cb96cced5e0a4fe6c6e4d810287cc57f68d785d2a94785b
-  patches:
-    - qtpy.patch
+  # patches:
+    # - qtpy.patch
 
 build:
   noarch: python
