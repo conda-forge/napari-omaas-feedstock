@@ -38,8 +38,6 @@ requirements:
     - scikit-image  # Imported but not listed as requirement
     - scipy  # Imported but not listed as requirement
     - sif-parser
-    - pip:
-      - napari-tiff
 
 test:
   imports:
