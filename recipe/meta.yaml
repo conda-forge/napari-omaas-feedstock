@@ -29,7 +29,6 @@ requirements:
     - napari-mat-file-reader
     - napari-matplotlib
     - napari-sif-reader
-    - napari-tiff
     - numpy
     - pandas  # Imported but not listed as requirement
     - pyqtgraph
@@ -39,6 +38,8 @@ requirements:
     - scikit-image  # Imported but not listed as requirement
     - scipy  # Imported but not listed as requirement
     - sif-parser
+    - pip:
+      - napari-tiff
 
 test:
   imports:
