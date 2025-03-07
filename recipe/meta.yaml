@@ -1,5 +1,5 @@
 {% set name = "napari-omaas" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: f2541caaba3f6c02577a5034cdbdda8caf6d3b98d8858f93c8c4dc9575f6fa45
+  sha256: 91ee6e80c9ec332c2ffeb928faa62d1c8b78b0af3134189f2128a02c64ca2ca7
   patches:
     - qtpy.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
