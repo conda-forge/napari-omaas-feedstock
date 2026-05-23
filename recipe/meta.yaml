@@ -1,5 +1,5 @@
 {% set name = "napari-omaas" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,17 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: f2541caaba3f6c02577a5034cdbdda8caf6d3b98d8858f93c8c4dc9575f6fa45
-  patches:
-    - qtpy.patch
+  sha256: bb733d15606cb87f2cb96cced5e0a4fe6c6e4d810287cc57f68d785d2a94785b
+  # patches:
+    # - qtpy.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  commands:
+    - pip install napari-tiff 
+    - pip install optimap
+  number: 0
 
 requirements:
   host:
